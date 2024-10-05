@@ -13,7 +13,13 @@ const unionSet = union(setA, setB);
 const intersection = (setA, setB) => {
   return new Set([...setA].filter((item) => setB.has(item)));
 };
-
-// Example Usage:
 const intersectionSet = intersection(setA, setB);
-console.log(intersectionSet);
+// console.log(intersectionSet);
+
+// * Difference
+const difference = (setA, setB) => {
+  return new Set([...setA].filter((item) => !setB.has(item)));
+};
+
+const differenceSet = difference(setA, setB);
+// console.log(setA, setB);
