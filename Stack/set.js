@@ -31,5 +31,14 @@ const isSubset = (setA, setB) => {
 const setC = new Set([1, 2]);
 const setD = new Set([1, 2, 3]);
 
-console.log(isSubset(setC, setD));
-console.log(isSubset(setA, setB));
+// console.log(isSubset(setC, setD));
+// console.log(isSubset(setA, setB));
+
+//* Symmetric Difference
+const symmetricDifference = (setA, setB) => {
+  const diffA = [...setA].filter((item) => !setB.has(item));
+  const diffB = [...setB].filter((item) => !setA.has(item));
+  return new Set([...diffA, ...diffB]);
+};
+const symmetricDiffSet = symmetricDifference(setA, setB);
+console.log(symmetricDiffSet);
