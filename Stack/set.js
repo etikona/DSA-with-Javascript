@@ -23,3 +23,13 @@ const difference = (setA, setB) => {
 
 const differenceSet = difference(setA, setB);
 // console.log(setA, setB);
+
+//* Subset
+const isSubset = (setA, setB) => {
+  return [...setA].every((item) => setB.has(item));
+};
+const setC = new Set([1, 2]);
+const setD = new Set([1, 2, 3]);
+
+console.log(isSubset(setC, setD));
+console.log(isSubset(setA, setB));
